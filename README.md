@@ -8,4 +8,6 @@
 
 做了逻辑判断，重复添加或移除观察者都不会有问题。
 
+**注意**：与系统KVO不兼容，即同一个被观察者对象不可以同时使用系统KVO和LDKVO，不同被观察对象不影响。
+
 自己实现KVO主要是用来理解KVO的实现原理，以及学习使用runtime机制。如果实际项目使用KVO，可以看下Facebook的[KVOController](https://github.com/facebook/KVOController)。
