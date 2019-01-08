@@ -182,5 +182,8 @@ void setterIMP(id self,SEL _cmd,void *newValue){
     NSString *setMethodName = [NSString stringWithFormat:@"set%@:",upperKey]; // 一定不能忘了 :
     return setMethodName;
 }
-
+//// 重写该方法，会关闭系统KVO执行
+//+ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key {
+//    return NO;
+//}
 @end
